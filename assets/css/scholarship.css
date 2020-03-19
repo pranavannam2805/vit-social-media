@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Bellota-LightItalic';
+    src: url("../fonts/Bellota-LightItalic.otf");
+}
+@font-face {
+    font-family: 'Bellota-BoldItalic';
+    src: url("../fonts/Bellota-BoldItalic.otf");
+}
+.main_column {
+    float: right;
+    width: 70%;
+    min-height: 160px;
+    z-index: -1;
+    background-color: #DFD0F9;
+}
+.scholarship_font{
+  font-family: 'Times';
+    background-color: #33FFB3;
+    width: 100%;
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 20px;
+    padding-left: 350;
+    box-shadow: 2px 5px;
+}
+.scholarship_info{
+    font-family: calibri;
+    background-color: #DFD0F9;
+}
+.s1{
+    padding: 10 0 2 5;
+    background-color: #FBF7D6;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+    margin: 1.5rem 1px 1.5rem 1px;
+}

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Bellota-LightItalic';
+    src: url("../fonts/Bellota-LightItalic.otf");
+}
+@font-face {
+    font-family: 'Bellota-BoldItalic';
+    src: url("../fonts/Bellota-BoldItalic.otf");
+}
+.main_column {
+    float: right;
+    width: 70%;
+    min-height: 160px;
+    z-index: -1;
+    background-color: #DFD0F9;
+}
+.tpoit_font{
+  font-family: 'Times';
+    background-color:  #6ef7d5;
+    width: 100%;
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 2px 5px;
+    border-bottom: 1px solid #c2c2c2;
+}
+.Place_stats{
+    padding:10px 0 5px 3px;
+    opacity: 50%;
+    border-bottom:2px solid #c2c2c2;
+    
+}
+.articleBodyit1{
+    padding: 10px 0px 0px;
+    font-family: times;
+    outline-width: 2%;
+    font-size: 20px;
+}
+.table-responsiveit1{
+    position:relative;
+    background-color: #eff59be0;
+}
+
+
+.Company_stats{
+    padding:10px 0 5px 3px;
+    opacity: 50%;
+    border-bottom:2px solid #c2c2c2;
+   
+}
+.articleBodyit2{
+    padding: 10px 10px 5px ;
+    font-family: times;
+    outline-width: 2%;
+    font-size: 20px;
+}
+.table-responsiveit2{
+    background-color: #eff59be0;
+}

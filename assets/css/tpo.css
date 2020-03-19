@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Bellota-LightItalic';
+    src: url("../fonts/Bellota-LightItalic.otf");
+}
+@font-face {
+    font-family: 'Bellota-BoldItalic';
+    src: url("../fonts/Bellota-BoldItalic.otf");
+}
+.main_column {
+    float: right;
+    width: 70%;
+    min-height: 160px;
+    z-index: -1;
+    background-color: #DFD0F9;
+}
+.TPO_font{
+  font-family: 'Times';
+    background-color:  #00ff80;
+    width: 100%;
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 2px 5px;
+}
+.dropdownLinks{
+	padding: 20px 10px 5px;
+	margin: 0;
+}
+.dropdownLinks ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #c2c2c2;
+}
+.articleBody {
+	padding: 10px 10px 5px;
+	font-family: times;
+    outline-width: 2%;
+    font-size: 20px;
+}
+.articleBody ul li {
+	padding: 10px 0;
+}
+.articleBody h4{
+	padding: 5px 0;
+	font-family: system-ui;
+}
+.table-responsive{
+	background-color: #f0f075;
+}
