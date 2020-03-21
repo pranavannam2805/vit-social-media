@@ -28,12 +28,14 @@ else {
   <link rel="stylesheet" type="text/css" href="assets/css/events.css">
    <link rel="stylesheet" type="text/css" href="assets/css/scholarship.css">
    <link rel="stylesheet" type="text/css" href="assets/css/tpo.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/tpochem.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/tpoelex.css">
    <link rel="stylesheet" type="text/css" href="assets/css/tpocs.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/tpoinstru.css">
    <link rel="stylesheet" type="text/css" href="assets/css/tpoit.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/tpomc.css">
-       <link rel="stylesheet" type="text/css" href="assets/css/tpoinstru.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/tpochem.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/tpoelex.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/tpomc.css">
+
+
 
 
 
