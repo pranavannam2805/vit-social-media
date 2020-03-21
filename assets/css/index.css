@@ -202,7 +202,14 @@ float:right;
   text-shadow: #000 2px 2px 1px;
   font-size: 90%;
   margin: 0;
-  position: absolute;
+  position: relative;
   outline:0;
+}
+
+.tt_pic{
+height: 50%;
+width:100%;
+ border-radius: 10px;
+
 }
 
