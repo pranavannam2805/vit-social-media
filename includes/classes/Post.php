@@ -81,9 +81,7 @@ class Post {
 				if($added_by_obj->isClosed()) {
 					continue;
 				}
-
-				$user_logged_obj = new User($this->con, $userLoggedIn);
-				if($user_logged_obj->isFriend($added_by)){
+				
 
 					if($num_iterations++ < $start)
 						continue; 
@@ -106,7 +104,7 @@ class Post {
 
 
 
-
+					// for the comments part
 					?>
 						<script>
 							function toggle<?php echo $id; ?>() {
@@ -122,7 +120,7 @@ class Post {
 					<?php
 
 
-
+					// for the comments part
 
 
 
@@ -208,7 +206,6 @@ class Post {
 							<iframe src='comment_frame.php?post_id=$id' id ='comment_iframe' frameborder=0 > </iframe>
 							</div>
 							<hr>";
-				}
 
 			} //End while loop
 
