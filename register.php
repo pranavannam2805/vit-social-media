@@ -40,7 +40,7 @@ require 'includes/form_handlers/register_handler.php';
         	</div>
     </div>
     <div class="wrapper">
-        <form  action="registration.php" method="post">
+        <form  action="register.php" method="post">
           <div class="Register_box">
             <div class="Registerbox_header">
                     <h2>Register</h2>
