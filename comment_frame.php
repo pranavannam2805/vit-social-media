@@ -2,6 +2,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/comment.css">
 </head>
 <body>
 
@@ -57,7 +58,7 @@
 
 	<!-- Load comments -->
 	<?php
-		$get_comments = mysqli_query($con,"SELECT  * FROM comments WHERE  post_id=post_id ORDER BY id ASC ");
+		$get_comments = mysqli_query($con,"SELECT  * FROM comments WHERE  post_id=post_id ORDER BY id DESC ");
 		$count=mysqli_num_rows($get_comments);
 
 		if ($count !=0)
