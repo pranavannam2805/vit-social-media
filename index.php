@@ -1,12 +1,54 @@
-	<?php
+<?php
 include("includes/header.php");
 include("includes/classes/User.php");
 include("includes/classes/Post.php");
 
 
 if(isset($_POST['post'])){
-	$post = new Post($con, $userLoggedIn);
-	$post->submitPost($_POST['post_text'], 'none');
+ 
+	$uploadOk =1;
+	$imageName = $_FILES['fileToUpload']['name'];
+	$errorMessage="";
+
+	if($imageName != ""){
+		$targetdir = "assets/images/posts/";
+		$imageName = $targetdir . uniqid() .basename($imageName);
+		$imageFileType = pathinfo($imageName, PATHINFO_EXTENSION);
+
+		if($_FILES['fileToUpload']['size']> 10000000 ){
+
+			$errorMessage = "Sorry the file is too larget upload";
+			$uploadOk = 0;
+		}
+
+		if(strtolower($imageFileType) != "jpeg" && strtolower($imageFileType) != "png" && strtolower($imageFileType) != "jpg") {
+			$errorMessage = "Sorry, only jpeg, jpg and png files are allowed";
+			$uploadOk = 0;
+		}
+
+		if($uploadOk){
+			if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $imageName)){
+				// image uploaded okay
+			}
+			else {
+				// image did not upload
+				$uploadOk=0;
+			}
+		}
+
+	}
+
+	if($uploadOk){
+			$post = new Post($con, $userLoggedIn);
+			$post->submitPost($_POST['post_text'], 'none', $imageName);
+	}
+	else {
+		echo "<div style='text-align:center;' class='alert alert-danger'>
+				$errorMessage
+			</div>";
+	}
+
+
 }
 
 
@@ -26,7 +68,8 @@ if(isset($_POST['post'])){
   </div>
   <!--post column -->
   <div class="main_column column">
-      <form class="post_form" action="index.php" method="post">
+      <form class="post_form" action="index.php" method="post"  enctype="multipart/form-data" >
+      	<input type="file" name="fileToUpload" id="fileToUpload" style="margin: 7px 7px 7px 20px;">
         <textarea name="post_text" id="post_text" placeholder="Got something to say?"></textarea>
         <input type="submit" name="post" id="post_button" value="Post">
         <hr>

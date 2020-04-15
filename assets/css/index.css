@@ -210,6 +210,12 @@ float:right;
 height: 50%;
 width:100%;
  border-radius: 10px;
-
 }
 
+.postedImage img{
+
+max-height: 475px;
+width: 100%;
+margin: 15px auto;
+border-radius: 15px;
+}
