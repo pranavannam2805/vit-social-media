@@ -1,12 +1,4 @@
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/comment.css">
-</head>
-<body>
-
-	<?php  
+<?php  
 	require 'config/config.php';
 	include("includes/classes/User.php");
 	include("includes/classes/Post.php");
@@ -21,6 +13,15 @@
 	}
 
 	?>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/comment.css">
+</head>
+<body>
+
+	
 	<script>
 		function toggle() {
 			var element = document.getElementById("comment_section");
@@ -58,7 +59,7 @@
 
 	<!-- Load comments -->
 	<?php
-		$get_comments = mysqli_query($con,"SELECT  * FROM comments WHERE  $post_id=post_id ORDER BY id DESC ");
+		$get_comments = mysqli_query($con,"SELECT  * FROM comments WHERE  $post_id = post_id ORDER BY id DESC ");
 		$count=mysqli_num_rows($get_comments);
 
 		if ($count !=0)
@@ -69,6 +70,7 @@
 				$posted_by =$comment['posted_by'];
 				$date_added=$comment['date_added'];
 				$removed = $comment['removed'];
+				$post_id1= $comment['post_id'];
 
 				//Timeframe
 				$date_time_now = date("Y-m-d H:i:s");
@@ -141,11 +143,13 @@
 
 
 			?>
+			<!--  comment section problem is here   -->
+
 
 			<div class = "comment_section">
 				<a href="<?php echo $posted_by?>" target=_parent> <img src="<?php echo  $user_obj->getProfilePic(); ?>" title="<?php echo $posted_by;?>" style = "float:left; height=15px; border-radius:100px; max-width: 40px; padding: 5px 5px 5px 5px;">  </a>
 				<a href="<?php echo $posted_by?>" target=_parent> <b style = " padding: 0px 5px 5px 5px;"> <?php echo $user_obj->getFirstAndLastName();?></b> </a>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $time_message  ."<br><br> ". $comment_body;  ?>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $time_message  ."<br>&nbsp; ". $comment_body;  ?>
 				<br>
 				<br>
 				
@@ -154,6 +158,11 @@
 			<?php
 
 			}
+		}
+		else
+		{
+			echo "<center><br><br>No comments to show !!</center>";
+
 		}
 	
 
