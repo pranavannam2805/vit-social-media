@@ -18,8 +18,10 @@ else {
 	<title>V-Met</title>
 
 	<!-- Javascript -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/vmet.js"></script>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
